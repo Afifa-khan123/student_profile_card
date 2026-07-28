@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>studen profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> STUDENT PROFILE CARD </h1>
+    <p class="subtitle">Enter your details</p>
+
+    <label>Student Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <br>
+    <label>Age:</label>
+    <input type="number" id="age" placeholder="Enter your age">
+    <br>
+    <label>Favorite Subject:</label>
+    <input type="text" id="subject" placeholder="Enter your favorite subject">
+    <br>
+    <label>Favorite Colour:</label>
+    <input type="text" id="colour" placeholder="Enter your favorite colour">
+
+    <br><br>
+    <button class="btn-create" onclick="createProfile()">✅ Create Profile</button>
+    <br>
+    <button class="btn-theme" onclick="changeTheme()">🌓 Change Theme</button>
+    <br>
+    <button class="btn-hide" onclick="hideProfile()">🙈 Hide Profile</button>
+    <br>
+    <button class="btn-reset" onclick="resetProfile()">🔄 Reset</button>
+    <br>
+    <hr>
+    <div class="card" id="profileCard">
+         <!-- <class="dark-theme"> -->
+         <h2>Student Profile</h2>
+         <p id="displayName"></p>
+         <p id="displayAge"></p>
+         <p id="displaySubject"></p>
+         <p id="todaysdate"></p>
+         <h2 id="greeting"></h2>
+     </div>
+     <script src="script.js"></script>
+ </body>
+ </html> 

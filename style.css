@@ -1,38 +1,346 @@
-h1{
-    color: rgb(231, 105, 126);
-}
-body {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #e8f4ff;;
-}
-input {
-    padding: 10px;
-    margin: 8px;
-    border-radius: 8px;
-    border: 1px solid gray;
-}
-.card {
-    width: 350px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0px 5px 15px gray;
-}
+
 button {
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 8px;
+    padding: 10px 22px;
+    margin: 8px 6px 8px 0;
     border: none;
-    background-color: darkblue;
-    color: white;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.3s ease;
 }
+
 button:hover {
-    background-color: blue;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.1);
 }
+
+button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Buttons (individual colors) ===== */
+.btn-create {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.btn-theme {
+    background: linear-gradient(135deg, #614385, #516395);
+}
+
+.btn-hide {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #3a2a00;
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, #eb3349, #f45c43);
+}
+
+/* ===== Divider ===== */
+hr {
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-top: 2px dashed #ffffffa0;
+    margin: 25px 0;
+}
+
+/* ===== Profile Card ===== */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px 40px;
+    width: 320px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #667eea;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #444;
+    transition: color 0.4s ease;
+}
+
+#greeting {
+    color: #e67e22;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* ===== Dark Theme (toggled via JS) ===== */
 .dark-theme {
-    background-color: #222;
-    color: white;
+    background-color: #2c2c3a;
+}
+
+.dark-theme h2 {
+    color: #9face6;
+    border-color: #444;
+}
+
+.dark-theme p {
+    color: #ddd;
+}
+
+.dark-theme #greeting {
+    color: #f1c40f;
+}
+
+/* ===== Hidden State ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+ */
+
+
+
+
+ */
+
+/* ===== Base Setup ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2c2c2c;
+}
+
+h1 {
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Form Layout ===== */
+label {
+    display: inline-block;
+    width: 160px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px 12px;
+    width: 220px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    background-color: #fff;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+    border-color: #9face6;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.6);
+    transform: scale(1.02);
+}
+
+/* ===== Buttons (base) ===== */
+button {
+    padding: 10px 22px;
+    margin: 8px 6px 8px 0;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Buttons (individual colors) ===== */
+.btn-create {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.btn-theme {
+    background: linear-gradient(135deg, #614385, #516395);
+}
+
+.btn-hide {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: #3a2a00;
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, #eb3349, #f45c43);
+}
+
+/* ===== Divider ===== */
+hr {
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-top: 2px dashed #ffffffa0;
+    margin: 25px 0;
+}
+
+/* ===== Profile Card ===== */
+.card {
+    background-color: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 30px 40px;
+    width: 320px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #000000;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #000000;
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+
+#greeting {
+    color: #000000;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* ===== Dark Theme (toggled via JS) ===== */
+.dark-theme {
+    background: linear-gradient(135deg, #614385, #516395);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme h2 {
+    color: #ffd200;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dark-theme p {
+    color: #eee;
+}
+
+.dark-theme #greeting {
+    color: #a8e063;
+}
+
+/* ===== Hidden State ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
 }
