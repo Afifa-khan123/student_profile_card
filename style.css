@@ -1,0 +1,38 @@
+h1{
+    color: rgb(231, 105, 126);
+}
+body {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #e8f4ff;;
+}
+input {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+.card {
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 5px 15px gray;
+}
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: blue;
+}
+.dark-theme {
+    background-color: #222;
+    color: white;
+}
